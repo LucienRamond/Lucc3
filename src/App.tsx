@@ -6,6 +6,7 @@ import Monopage from "./pages/services/Monopage";
 import Ecommerce from "./pages/services/Ecommerce";
 import Quote from "./pages/contact/Quote";
 import Business from "./pages/contact/Business";
+import Footer from "./pages/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/devis" element={<Quote />} />
         <Route path="/lentreprise" element={<Business />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
