@@ -1,3 +1,5 @@
+import Page from "@/components/ui/page";
+
 export default function Home() {
-  return <div>Homepage</div>;
+  return <Page>Homepage</Page>;
 }

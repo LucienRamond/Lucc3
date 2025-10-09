@@ -1,3 +1,5 @@
+import Page from "@/components/ui/page";
+
 export default function Business() {
-  return <div>L'entreprise</div>;
+  return <Page>L'entreprise</Page>;
 }

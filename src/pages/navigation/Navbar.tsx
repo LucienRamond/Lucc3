@@ -11,7 +11,7 @@ import { Link } from "@radix-ui/react-navigation-menu";
 
 export default function Navbar() {
   return (
-    <NavigationMenu viewport={false}>
+    <NavigationMenu viewport={false} className=" p-2">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink

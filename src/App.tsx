@@ -11,16 +11,24 @@ import Footer from "./pages/footer/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/monopage" element={<Monopage />} />
-        <Route path="/ecommerce" element={<Ecommerce />} />
-        <Route path="/devis" element={<Quote />} />
-        <Route path="/lentreprise" element={<Business />} />
-      </Routes>
-      <Footer />
+      <div className=" h-full grid grid-rows-[max-content_1fr_max-content]">
+        <div>
+          <Navbar />
+        </div>
+        <div className=" ">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/monopage" element={<Monopage />} />
+            <Route path="/ecommerce" element={<Ecommerce />} />
+            <Route path="/devis" element={<Quote />} />
+            <Route path="/lentreprise" element={<Business />} />
+          </Routes>
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

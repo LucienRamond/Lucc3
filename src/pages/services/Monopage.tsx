@@ -1,3 +1,5 @@
+import Page from "@/components/ui/page";
+
 export default function Monopage() {
-  return <div>Sites monopage</div>;
+  return <Page>Sites monopage</Page>;
 }

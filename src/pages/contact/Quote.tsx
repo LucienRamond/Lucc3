@@ -1,3 +1,5 @@
+import Page from "@/components/ui/page";
+
 export default function Quote() {
-  return <div>Devis sur mesure</div>;
+  return <Page>Devis sur mesure</Page>;
 }
