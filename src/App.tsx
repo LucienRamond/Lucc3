@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./pages/navigation/Navbar";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import Monopage from "./pages/services/Monopage";
@@ -7,6 +6,7 @@ import Ecommerce from "./pages/services/Ecommerce";
 import Quote from "./pages/contact/Quote";
 import Business from "./pages/contact/Business";
 import Footer from "./pages/footer/Footer";
+import MainNavbar from "./pages/navigation/MainNavbar";
 
 function App() {
   const alignNavbar = {
@@ -20,7 +20,7 @@ function App() {
       <div className=" h-full grid grid-rows-[max-content_1fr_max-content]">
         {/** vvvv Choose the navbar alignment vvv */}
         <div className={`flex ${alignNavbar.start}`}>
-          <Navbar />
+          <MainNavbar />
         </div>
         <div className=" flex justify-center">
           <Routes>

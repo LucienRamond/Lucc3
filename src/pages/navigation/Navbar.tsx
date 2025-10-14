@@ -12,7 +12,7 @@ import menu from "./menu";
 
 export default function Navbar() {
   return (
-    <NavigationMenu viewport={false} className=" p-2">
+    <NavigationMenu viewport={false}>
       <NavigationMenuList>
         {menu.map((m) => {
           if (m.style == "simple") {
@@ -37,7 +37,10 @@ export default function Navbar() {
                     {m.content.navigation?.map((nav) => {
                       return (
                         <li>
-                          <NavigationMenuLink className=" hover:bg-black/15">
+                          <NavigationMenuLink
+                            asChild
+                            className=" hover:bg-black/15"
+                          >
                             <Link href={nav.nav}>
                               <div className=" font-bold">{nav.title}</div>
                               {nav.description && (
