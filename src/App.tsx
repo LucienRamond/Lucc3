@@ -9,19 +9,10 @@ import Footer from "./pages/footer/Footer";
 import MainNavbar from "./pages/navigation/MainNavbar";
 
 function App() {
-  const alignNavbar = {
-    start: "justify-start",
-    center: "justify-center",
-    end: "justify-end",
-  };
-
   return (
     <BrowserRouter>
       <div className=" h-full grid grid-rows-[max-content_1fr_max-content]">
-        {/** vvvv Choose the navbar alignment vvv */}
-        <div className={`flex ${alignNavbar.start}`}>
-          <MainNavbar />
-        </div>
+        <MainNavbar />
         <div className=" flex justify-center">
           <Routes>
             <Route path="/" element={<Home />} />

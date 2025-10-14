@@ -28,7 +28,7 @@
 
  */
 
-const menu = [
+export const menu = [
   {
     style: "simple",
     content: {
@@ -79,4 +79,8 @@ const menu = [
   },
 ];
 
-export default menu;
+export const alignNavbar = {
+  start: "justify-start",
+  center: "justify-center",
+  end: "justify-end",
+};
