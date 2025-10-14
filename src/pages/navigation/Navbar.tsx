@@ -8,76 +8,54 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Link } from "@radix-ui/react-navigation-menu";
+import menu from "./menu";
 
 export default function Navbar() {
   return (
     <NavigationMenu viewport={false} className=" p-2">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className={`${navigationMenuTriggerStyle()} hover:bg-black/15`}
-          >
-            <Link href="/">Accueil</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="  data-[state=open]:bg-black/15">
-            Services
-          </NavigationMenuTrigger>
-          <NavigationMenuContent asChild>
-            <ul className=" text-left min-w-2xs bg-white">
-              <li>
-                <NavigationMenuLink className=" hover:bg-black/15">
-                  <Link href="/monopage">
-                    <div className=" font-bold">Site monopage</div>
-                    <p className=" italic">Création de site vitrine monopage</p>
-                  </Link>
+        {menu.map((m) => {
+          if (m.style == "simple") {
+            return (
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={`${navigationMenuTriggerStyle()} hover:bg-black/15`}
+                >
+                  <Link href={`${m.content.nav}`}>{m.content.title}</Link>
                 </NavigationMenuLink>
-              </li>
-              <li>
-                <NavigationMenuLink className=" hover:bg-black/15">
-                  <Link href="/ecommerce">
-                    <div className=" font-bold">Site e-commerce</div>
-                    <p className=" italic">
-                      Création de site e-commerce sur mesure
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="  data-[state=open]:bg-black/15">
-            Contact
-          </NavigationMenuTrigger>
-          <NavigationMenuContent asChild>
-            <ul className=" text-left min-w-[150px] bg-white">
-              <li>
-                <NavigationMenuLink className=" hover:bg-black/15">
-                  <Link href="/lentreprise" className=" font-medium">
-                    L'entreprise
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <li>
-                <NavigationMenuLink className=" hover:bg-black/15">
-                  <Link href="/devis" className=" font-medium">
-                    Devis
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <li>
-                <NavigationMenuLink className=" hover:bg-black/15">
-                  <Link href="/contact" className=" font-medium">
-                    Contact
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+              </NavigationMenuItem>
+            );
+          } else {
+            return (
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="  data-[state=open]:bg-black/15">
+                  {m.content.maintTitle}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent asChild>
+                  <ul className=" text-left bg-white">
+                    {m.content.navigation?.map((nav) => {
+                      return (
+                        <li>
+                          <NavigationMenuLink className=" hover:bg-black/15">
+                            <Link href={nav.nav}>
+                              <div className=" font-bold">{nav.title}</div>
+                              {nav.description && (
+                                <p className=" italic min-w-[250px]">
+                                  {nav.description}
+                                </p>
+                              )}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          }
+        })}
       </NavigationMenuList>
     </NavigationMenu>
   );
