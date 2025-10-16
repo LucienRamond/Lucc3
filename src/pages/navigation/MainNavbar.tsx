@@ -1,3 +1,4 @@
+import ToggleTheme from "@/providers/ToggleTheme";
 import MobileNavbar from "./MobileNavbar";
 import Navbar from "./Navbar";
 
@@ -5,6 +6,7 @@ export default function MainNavbar() {
   return (
     /** vvvv Choose the navbar alignment vvv */
     <div className={`p-2`}>
+      <ToggleTheme />
       <div className={`sm:block hidden`}>
         <Navbar />
       </div>

@@ -1,0 +1,16 @@
+@use "colors" as *;
+
+html[data-theme="dark"] {
+  --bg-color: #{$black-3};
+  --color: #{$black-1};
+}
+
+// html[data-theme="light"] {
+//   --bg-color: #{$red-4};
+//   --color: #{$red-1};
+// }
+
+html[data-theme="light"] {
+  --bg-color: #{$blue-4};
+  --color: #{$blue-1};
+}

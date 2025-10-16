@@ -1,0 +1,6 @@
+@use "./scss/themes" as *;
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color);
+}

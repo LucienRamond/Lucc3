@@ -36,7 +36,7 @@ export default function MobileNavbar() {
           </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="w-[100vw] bg-white text-left p-2 border-y mt-2"
+          className="w-[100vw] bg-[var(--bg-color)] text-left p-2 border-y mt-2"
           align="start"
         >
           {menu.map((m) => {

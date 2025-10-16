@@ -38,7 +38,7 @@ export default function Navbar() {
                       {m.content.maintTitle}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent asChild>
-                      <ul className=" text-left bg-white">
+                      <ul className=" text-left bg-[var(--bg-color)]">
                         {m.content.navigation?.map((nav) => {
                           return (
                             <li>
