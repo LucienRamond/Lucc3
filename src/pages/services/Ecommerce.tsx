@@ -1,5 +1,5 @@
 import Page from "@/components/ui/page";
 
 export default function Ecommerce() {
-  return <Page>Sites e-commerce</Page>;
+  return <Page title="Les sites e-commerce">Sites e-commerce</Page>;
 }
