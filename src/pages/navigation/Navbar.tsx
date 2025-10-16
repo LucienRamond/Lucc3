@@ -13,13 +13,13 @@ import { menu, alignNavbar } from "./menu";
 export default function Navbar() {
   return (
     /** vvvv Choose alignment for navbar vvvv */
-    <div className={` flex ${alignNavbar.start}`}>
+    <div className={` mx-auto flex ${alignNavbar.start}`}>
       <div className=" grid gap-2 grid-cols-[max-content_1fr]">
         <div className=" flex">
           {/** vvvv Import your logo vvvv */}
           <img src="/vite.svg" className=" p-2" />
           {/* vvvv Type your company name here */}
-          <div className=" h-full font-bold text-2xl">
+          <div className=" h-full font-bold text-2xl text-[var(--company-name)]">
             <span className=" align-sub">Lucc3</span>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function Navbar() {
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       asChild
-                      className={`${navigationMenuTriggerStyle()} hover:bg-black/15`}
+                      className={`${navigationMenuTriggerStyle()} hover:bg-[var(--navbar-menu-active)] text-[var(--navbar-titles)]`}
                     >
                       <Link href={`${m.content.nav}`}>{m.content.title}</Link>
                     </NavigationMenuLink>
@@ -41,17 +41,17 @@ export default function Navbar() {
               } else {
                 return (
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="  data-[state=open]:bg-black/15">
+                    <NavigationMenuTrigger className=" text-[var(--navbar-titles)]  data-[state=open]:bg-[var(--navbar-menu-active)]">
                       {m.content.maintTitle}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent asChild>
-                      <ul className=" text-left bg-[var(--bg-color)]">
+                      <ul className=" text-left bg-[var(--navbar-menu)]">
                         {m.content.navigation?.map((nav) => {
                           return (
                             <li>
                               <NavigationMenuLink
                                 asChild
-                                className=" hover:bg-black/15"
+                                className=" hover:bg-[var(--navbar-bg)]"
                               >
                                 <Link href={nav.nav}>
                                   <div className=" font-bold">{nav.title}</div>

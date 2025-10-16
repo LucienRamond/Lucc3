@@ -5,7 +5,9 @@ import Navbar from "./Navbar";
 export default function MainNavbar() {
   return (
     /** vvvv Choose the navbar alignment vvv */
-    <div className={`p-2`}>
+    <div
+      className={`bg-[var(--navbar-bg)] p-2 text-[var(--navbar-text)] border-b border-b-[var(--border)]`}
+    >
       <ToggleTheme />
       <div className={`sm:block hidden`}>
         <Navbar />

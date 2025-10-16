@@ -32,27 +32,27 @@ export default function MobileNavbar() {
             <div className="row-start-1 col-start-1 col-end-3 col-span-2 justify-self-center flex gap-2">
               <img src="/vite.svg" />
               {/* vvvv Type your company name here */}
-              <div className=" h-full font-bold text-2xl">
+              <div className=" h-full font-bold text-2xl text-[var(--company-name)]">
                 <span className="">Lucc3</span>
               </div>
             </div>
           </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="w-[100vw] bg-[var(--bg-color)] text-left p-2 border-y mt-2"
+          className="w-[100vw] bg-[var(--navbar-menu-active)] text-left p-2 border-y mt-2"
           align="start"
         >
           {menu.map((m) => {
             if (m.style == "simple") {
               return (
-                <DropdownMenuItem className=" font-semibold">
+                <DropdownMenuItem className=" text-[var(--navbar-titles)] font-semibold">
                   <a href={`${m.content.nav}`}>{m.content.title}</a>
                 </DropdownMenuItem>
               );
             } else {
               return (
                 <>
-                  <DropdownMenuLabel className=" font-semibold">
+                  <DropdownMenuLabel className=" text-[var(--navbar-titles)] font-semibold">
                     {m.content.maintTitle}
                   </DropdownMenuLabel>
                   <DropdownMenuGroup>

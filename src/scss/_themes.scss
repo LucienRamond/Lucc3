@@ -10,7 +10,32 @@ html[data-theme="dark"] {
 //   --color: #{$red-1};
 // }
 
+// html[data-theme="light"] {
+//   --bg-color: #{$cool-4};
+//   --color: #{$cool-6};
+//   --border: #{$cool-5};
+
+//   --company-name: #{$cool-2};
+//   --navbar-bg: #{$cool-1};
+//   --navbar-titles: #{$cool-5};
+//   --navbar-text: #{$cool-6};
+//   --navbar-menu: #{$cool-2};
+//   --navbar-menu-active: #{$cool-2};
+
+//   --footer-text: #{$cool-2};
+// }
+
 html[data-theme="light"] {
-  --bg-color: #{$blue-4};
-  --color: #{$blue-1};
+  --bg-color: #{$redandlively-2};
+  --color: #{$redandlively-7};
+  --border: #{$redandlively-5};
+
+  --company-name: #{$redandlively-4};
+  --navbar-bg: #{$redandlively-1};
+  --navbar-titles: #{$redandlively-2};
+  --navbar-text: #{$redandlively-6};
+  --navbar-menu: #{$redandlively-4};
+  --navbar-menu-active: #{$redandlively-4};
+
+  --footer-text: #{$redandlively-4};
 }
