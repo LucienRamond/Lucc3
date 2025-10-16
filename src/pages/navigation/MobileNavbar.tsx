@@ -29,10 +29,13 @@ export default function MobileNavbar() {
               <MenuIcon />
             </Button>
             {/** vvvv Import your logo vvvv */}
-            <img
-              src="/vite.svg"
-              className=" row-start-1 col-start-1 col-end-3 col-span-2 justify-self-center"
-            />
+            <div className="row-start-1 col-start-1 col-end-3 col-span-2 justify-self-center flex gap-2">
+              <img src="/vite.svg" />
+              {/* vvvv Type your company name here */}
+              <div className=" h-full font-bold text-2xl">
+                <span className="">Lucc3</span>
+              </div>
+            </div>
           </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent

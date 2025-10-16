@@ -13,10 +13,17 @@ import { menu, alignNavbar } from "./menu";
 export default function Navbar() {
   return (
     /** vvvv Choose alignment for navbar vvvv */
-    <div className={` flex ${alignNavbar.center}`}>
-      <div className=" grid grid-cols-[max-content_1fr]">
-        {/** vvvv Import your logo vvvv */}
-        <img src="/vite.svg" className=" p-2" />
+    <div className={` flex ${alignNavbar.start}`}>
+      <div className=" grid gap-2 grid-cols-[max-content_1fr]">
+        <div className=" flex">
+          {/** vvvv Import your logo vvvv */}
+          <img src="/vite.svg" className=" p-2" />
+          {/* vvvv Type your company name here */}
+          <div className=" h-full font-bold text-2xl">
+            <span className=" align-sub">Lucc3</span>
+          </div>
+        </div>
+
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             {menu.map((m) => {
