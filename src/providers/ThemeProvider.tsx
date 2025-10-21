@@ -6,12 +6,14 @@ interface Props {
 }
 
 const ThemeProvider: React.FC<Props> = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [theme, setTheme] = useState("dark");
 
   function getThemeFromLocalStorage() {
-    const savedTheme = localStorage.getItem("darkTheme");
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      return savedTheme == "true" ? setDarkTheme(true) : setDarkTheme(false);
+      setTheme(savedTheme);
+    } else {
+      setTheme("dark");
     }
   }
 
@@ -19,10 +21,9 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
     getThemeFromLocalStorage();
   }, []);
 
-  function toggleThemeHandler() {
-    setDarkTheme((prevTheme) => {
-      const newTheme = prevTheme === false ? true : false;
-      localStorage.setItem("darkTheme", newTheme.toString());
+  function toggleThemeHandler(newTheme: string) {
+    setTheme(() => {
+      localStorage.setItem("theme", newTheme.toString());
       return newTheme;
     });
   }
@@ -30,7 +31,7 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
   return (
     <ThemeContext.Provider
       value={{
-        darkTheme: darkTheme,
+        theme: theme,
         toggleTheme: toggleThemeHandler,
       }}
     >

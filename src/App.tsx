@@ -7,11 +7,18 @@ import Quote from "./pages/contact/Quote";
 import Business from "./pages/contact/Business";
 import Footer from "./pages/footer/Footer";
 import MainNavbar from "./pages/navigation/MainNavbar";
+import { ContentSheet } from "./pages/content/ContentSheet";
+import ToggleTheme from "./providers/ToggleTheme";
 
 function App() {
   return (
     <BrowserRouter>
       <div className=" h-full grid grid-rows-[max-content_1fr_max-content]">
+        <ContentSheet />
+        <div className=" hidden">
+          <ToggleTheme />
+        </div>
+
         <MainNavbar />
         <div className=" flex justify-center">
           <Routes>

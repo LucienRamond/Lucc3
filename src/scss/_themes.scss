@@ -5,12 +5,7 @@ html[data-theme="dark"] {
   --color: #{$black-1};
 }
 
-// html[data-theme="light"] {
-//   --bg-color: #{$red-4};
-//   --color: #{$red-1};
-// }
-
-html[data-theme="light"] {
+html[data-theme="cool"] {
   --bg-color: #{$cool-4};
   --color: #{$cool-6};
   --border: #{$cool-5};
@@ -30,22 +25,22 @@ html[data-theme="light"] {
   --footer-text: #{$cool-2};
 }
 
-// html[data-theme="light"] {
-//   --bg-color: #{$redandlively-2};
-//   --color: #{$redandlively-6};
-//   --border: #{$redandlively-5};
+html[data-theme="redandlively"] {
+  --bg-color: #{$redandlively-2};
+  --color: #{$redandlively-6};
+  --border: #{$redandlively-5};
 
-//   --page-bg: #{$redandlively-4};
-//   --page-title: #{$redandlively-6};
+  --page-bg: #{$redandlively-4};
+  --page-title: #{$redandlively-6};
 
-//   --homepage-title: #{$redandlively-1};
+  --homepage-title: #{$redandlively-1};
 
-//   --company-name: #{$redandlively-4};
-//   --navbar-bg: #{$redandlively-1};
-//   --navbar-titles: #{$redandlively-2};
-//   --navbar-text: #{$redandlively-6};
-//   --navbar-menu: #{$redandlively-4};
-//   --navbar-menu-active: #{$redandlively-4};
+  --company-name: #{$redandlively-4};
+  --navbar-bg: #{$redandlively-1};
+  --navbar-titles: #{$redandlively-2};
+  --navbar-text: #{$redandlively-6};
+  --navbar-menu: #{$redandlively-4};
+  --navbar-menu-active: #{$redandlively-4};
 
-//   --footer-text: #{$redandlively-4};
-// }
+  --footer-text: #{$redandlively-4};
+}
