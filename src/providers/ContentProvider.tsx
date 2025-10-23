@@ -9,6 +9,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
   const [content, setContent] = useState<ContentProps>({
     company_name: "Lucc3",
     company_description: "Développeur de site internet",
+    navbar_alignment: "justify-start",
   });
 
   function getContentFromLocalStorage() {
@@ -19,6 +20,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
       setContent({
         company_name: "Lucc3",
         company_description: "Développeur de site internet",
+        navbar_alignment: "justify-start",
       });
     }
   }
@@ -40,6 +42,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
         content: {
           company_name: content.company_name.toString(),
           company_description: content.company_description,
+          navbar_alignment: content.navbar_alignment,
         },
         editContent: editContentHandler,
       }}

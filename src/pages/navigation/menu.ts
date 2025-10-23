@@ -78,9 +78,3 @@ export const menu = [
     },
   },
 ];
-
-export const alignNavbar = {
-  start: "justify-start",
-  center: "justify-center",
-  end: "justify-end",
-};

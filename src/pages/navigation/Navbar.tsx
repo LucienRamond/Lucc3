@@ -8,7 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Link } from "@radix-ui/react-navigation-menu";
-import { menu, alignNavbar } from "./menu";
+import { menu } from "./menu";
 import { useContext } from "react";
 import { ContentContext } from "@/providers/ContentContext";
 
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     /** vvvv Choose alignment for navbar vvvv */
-    <div className={` mx-auto flex ${alignNavbar.start}`}>
+    <div className={` mx-auto flex ${content.navbar_alignment}`}>
       <div className=" grid gap-2 grid-cols-[max-content_1fr]">
         <div className=" flex">
           {/** vvvv Import your logo vvvv */}
