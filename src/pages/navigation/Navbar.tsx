@@ -9,8 +9,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "@radix-ui/react-navigation-menu";
 import { menu, alignNavbar } from "./menu";
+import { useContext } from "react";
+import { ContentContext } from "@/providers/ContentContext";
 
 export default function Navbar() {
+  const { content } = useContext(ContentContext);
+
   return (
     /** vvvv Choose alignment for navbar vvvv */
     <div className={` mx-auto flex ${alignNavbar.start}`}>
@@ -20,7 +24,7 @@ export default function Navbar() {
           <img src="/vite.svg" className=" p-2" />
           {/* vvvv Type your company name here */}
           <div className=" h-full font-bold text-2xl text-[var(--company-name)]">
-            <span className=" align-sub">Lucc3</span>
+            <span className=" align-sub">{content.company_name}</span>
           </div>
         </div>
 

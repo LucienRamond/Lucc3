@@ -10,13 +10,20 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ContentContext } from "@/providers/ContentContext";
 import ToggleTheme from "@/providers/ToggleTheme";
 import { ArrowBigRightIcon } from "lucide-react";
+import { useContext } from "react";
 
 export function ContentSheet() {
+  const { content, editContent } = useContext(ContentContext);
+
   return (
     <Sheet modal={false}>
-      <SheetTrigger className=" data-[state=open]:hidden" asChild>
+      <SheetTrigger
+        className="h-[50px] opacity-50 hover:opacity-100 data-[state=open]:hidden"
+        asChild
+      >
         <div className=" absolute">
           <Button
             variant="outline"
@@ -36,7 +43,22 @@ export function ContentSheet() {
         </SheetHeader>
         <div className="grid flex-1 auto-rows-min gap-6 px-4">
           <ToggleTheme />
-          <Input type="text" placeholder="Company name" />
+          <Input
+            onChange={(e) =>
+              editContent({ ...content, company_name: e.target.value })
+            }
+            type="text"
+            placeholder={content.company_name}
+            value={content.company_name}
+          />
+          <Input
+            onChange={(e) =>
+              editContent({ ...content, company_description: e.target.value })
+            }
+            type="text"
+            value={content.company_description}
+            placeholder={content.company_description}
+          />
         </div>
         <SheetFooter>
           <SheetClose asChild>
