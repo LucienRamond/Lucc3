@@ -10,6 +10,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
     company_name: "Lucc3",
     company_description: "Développeur de site internet",
     navbar_alignment: "justify-start",
+    company_text: "Décrivez ici votre entreprise",
   });
 
   function getContentFromLocalStorage() {
@@ -21,6 +22,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
         company_name: "Lucc3",
         company_description: "Développeur de site internet",
         navbar_alignment: "justify-start",
+        company_text: "Décrivez ici votre entreprise",
       });
     }
   }
@@ -43,6 +45,7 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
           company_name: content.company_name.toString(),
           company_description: content.company_description,
           navbar_alignment: content.navbar_alignment,
+          company_text: content.company_text,
         },
         editContent: editContentHandler,
       }}

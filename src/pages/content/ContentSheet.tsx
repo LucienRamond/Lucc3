@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -16,9 +14,13 @@ import { ContentContext } from "@/providers/ContentContext";
 import ToggleTheme from "@/providers/ToggleTheme";
 import { ArrowBigRightIcon } from "lucide-react";
 import { useContext } from "react";
+import { useLocation } from "react-router-dom";
+import HomeContent from "./HomeContent";
+import CompanyContent from "./CompanyContent";
 
 export function ContentSheet() {
   const { content, editContent } = useContext(ContentContext);
+  const location = useLocation();
 
   return (
     <Sheet modal={false}>
@@ -85,30 +87,18 @@ export function ContentSheet() {
               </ButtonGroup>
             </div>
           </div>
-          <div className=" grid gap-2">
-            <Label htmlFor="company_name">Nom de l'entreprise</Label>
-            <Input
-              onChange={(e) =>
-                editContent({ ...content, company_name: e.target.value })
-              }
-              type="text"
-              placeholder={content.company_name}
-              value={content.company_name}
-              id="company_name"
+          {location.pathname == "/" && (
+            <HomeContent
+              content={content}
+              editContent={(new_content) => editContent(new_content)}
             />
-          </div>
-          <div className=" grid gap-2">
-            <Label htmlFor="company_description">Slogan</Label>
-            <Input
-              onChange={(e) =>
-                editContent({ ...content, company_description: e.target.value })
-              }
-              type="text"
-              value={content.company_description}
-              placeholder={content.company_description}
-              id="company_description"
+          )}
+          {location.pathname == "/lentreprise" && (
+            <CompanyContent
+              content={content}
+              editContent={(new_content) => editContent(new_content)}
             />
-          </div>
+          )}
         </div>
         <SheetFooter>
           <SheetClose asChild>

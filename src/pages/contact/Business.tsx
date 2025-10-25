@@ -1,5 +1,9 @@
 import Page from "@/components/ui/page";
+import { ContentContext } from "@/providers/ContentContext";
+import { useContext } from "react";
 
 export default function Business() {
-  return <Page title="Notre entreprise">L'entreprise</Page>;
+  const { content } = useContext(ContentContext);
+
+  return <Page title="Notre entreprise">{content.company_text}</Page>;
 }
