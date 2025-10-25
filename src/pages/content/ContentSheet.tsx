@@ -17,6 +17,8 @@ import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import HomeContent from "./HomeContent";
 import CompanyContent from "./CompanyContent";
+import Service1Content from "./Service1Content";
+import Service2Content from "./Service2Content";
 
 export function ContentSheet() {
   const { content, editContent } = useContext(ContentContext);
@@ -95,6 +97,18 @@ export function ContentSheet() {
           )}
           {location.pathname == "/lentreprise" && (
             <CompanyContent
+              content={content}
+              editContent={(new_content) => editContent(new_content)}
+            />
+          )}
+          {location.pathname == "/monopage" && (
+            <Service1Content
+              content={content}
+              editContent={(new_content) => editContent(new_content)}
+            />
+          )}
+          {location.pathname == "/ecommerce" && (
+            <Service2Content
               content={content}
               editContent={(new_content) => editContent(new_content)}
             />

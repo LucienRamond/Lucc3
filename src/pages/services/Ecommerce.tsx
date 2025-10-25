@@ -1,5 +1,9 @@
 import Page from "@/components/ui/page";
+import { ContentContext } from "@/providers/ContentContext";
+import { useContext } from "react";
 
 export default function Ecommerce() {
-  return <Page title="Les sites e-commerce">Sites e-commerce</Page>;
+  const { content } = useContext(ContentContext);
+
+  return <Page title={content.service_2_name}>{content.service_2_text}</Page>;
 }
