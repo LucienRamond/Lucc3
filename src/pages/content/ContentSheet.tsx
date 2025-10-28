@@ -19,6 +19,7 @@ import HomeContent from "./HomeContent";
 import CompanyContent from "./CompanyContent";
 import Service1Content from "./Service1Content";
 import Service2Content from "./Service2Content";
+import Service3Content from "./Service3Content";
 
 export function ContentSheet() {
   const { content, editContent } = useContext(ContentContext);
@@ -101,14 +102,20 @@ export function ContentSheet() {
               editContent={(new_content) => editContent(new_content)}
             />
           )}
-          {location.pathname == "/monopage" && (
+          {location.pathname == "/service1" && (
             <Service1Content
               content={content}
               editContent={(new_content) => editContent(new_content)}
             />
           )}
-          {location.pathname == "/ecommerce" && (
+          {location.pathname == "/service2" && (
             <Service2Content
+              content={content}
+              editContent={(new_content) => editContent(new_content)}
+            />
+          )}
+          {location.pathname == "/service3" && (
+            <Service3Content
               content={content}
               editContent={(new_content) => editContent(new_content)}
             />

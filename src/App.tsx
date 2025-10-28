@@ -1,14 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
-import Monopage from "./pages/services/Monopage";
-import Ecommerce from "./pages/services/Ecommerce";
 import Quote from "./pages/contact/Quote";
 import Business from "./pages/contact/Business";
 import Footer from "./pages/footer/Footer";
 import MainNavbar from "./pages/navigation/MainNavbar";
 import { ContentSheet } from "./pages/content/ContentSheet";
 import ToggleTheme from "./providers/ToggleTheme";
+import Service1 from "./pages/services/Service1";
+import Service2 from "./pages/services/Service2";
+import Service3 from "./pages/services/Service3";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/monopage" element={<Monopage />} />
-            <Route path="/ecommerce" element={<Ecommerce />} />
+            <Route path="/service1" element={<Service1 />} />
+            <Route path="/service2" element={<Service2 />} />
+            <Route path="/service3" element={<Service3 />} />
             <Route path="/devis" element={<Quote />} />
             <Route path="/lentreprise" element={<Business />} />
           </Routes>

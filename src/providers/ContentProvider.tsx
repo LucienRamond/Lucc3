@@ -12,11 +12,15 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
     navbar_alignment: "justify-start",
     company_text: "Décrivez ici votre entreprise",
     service_1_name: "Service 1",
-    service_1_description: "Voici le service 1",
-    service_1_text: "Decrivez ici le service 1",
+    service_1_description: "Meta description",
+    service_1_text: "Decription du service",
     service_2_name: "Service 2",
-    service_2_description: "Voici le service 2",
-    service_2_text: "Decrivez ici le service 2",
+    service_2_description: "Meta description",
+    service_2_text: "Decription du service",
+    service_3_name: "Service 3",
+    service_3_description: "Meta description",
+    service_3_text: "Decription du service",
+    service_number: 0,
   });
 
   function getContentFromLocalStorage() {
@@ -30,11 +34,15 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
         navbar_alignment: "justify-start",
         company_text: "Décrivez ici votre entreprise",
         service_1_name: "Service 1",
-        service_1_description: "Voici le service 1",
-        service_1_text: "Decrivez ici le service 1",
+        service_1_description: "Meta description",
+        service_1_text: "Decription du service",
         service_2_name: "Service 2",
-        service_2_description: "Voici le service 2",
-        service_2_text: "Decrivez ici le service 2",
+        service_2_description: "Meta description",
+        service_2_text: "Decription du service",
+        service_3_name: "Service 3",
+        service_3_description: "Meta description",
+        service_3_text: "Decription du service",
+        service_number: 0,
       });
     }
   }
@@ -64,6 +72,10 @@ const ContentProvider: React.FC<Props> = ({ children }) => {
           service_2_name: content.service_2_name,
           service_2_description: content.service_2_description,
           service_2_text: content.service_2_text,
+          service_3_name: content.service_3_name,
+          service_3_description: content.service_3_description,
+          service_3_text: content.service_3_text,
+          service_number: content.service_number,
         },
         editContent: editContentHandler,
       }}
