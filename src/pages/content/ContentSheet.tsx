@@ -49,52 +49,57 @@ export function ContentSheet() {
           </SheetDescription>
         </SheetHeader>
         <div className="grid flex-1 auto-rows-min gap-6 px-4">
-          <ToggleTheme />
-          <div className=" w-full grid justify-center">
-            <div className=" grid gap-2">
-              <div>Alignement du menu </div>
-              <ButtonGroup className="grid grid-cols-[1fr_1fr_1fr] w-[350px]">
-                <Button
-                  onClick={() =>
-                    editContent({
-                      ...content,
-                      navbar_alignment: "justify-start",
-                    })
-                  }
-                  className=" hover:bg-black/30 cursor-pointer"
-                  variant={"outline"}
-                >
-                  Gauche
-                </Button>
-                <Button
-                  onClick={() =>
-                    editContent({
-                      ...content,
-                      navbar_alignment: "justify-center",
-                    })
-                  }
-                  className=" hover:bg-black/30 cursor-pointer"
-                  variant={"outline"}
-                >
-                  Centre
-                </Button>
-                <Button
-                  onClick={() =>
-                    editContent({ ...content, navbar_alignment: "justify-end" })
-                  }
-                  className=" hover:bg-black/30 cursor-pointer"
-                  variant={"outline"}
-                >
-                  Droite
-                </Button>
-              </ButtonGroup>
-            </div>
-          </div>
           {location.pathname == "/" && (
-            <HomeContent
-              content={content}
-              editContent={(new_content) => editContent(new_content)}
-            />
+            <>
+              <ToggleTheme />
+              <div className=" w-full grid justify-center">
+                <div className=" grid gap-2">
+                  <div>Alignement du menu </div>
+                  <ButtonGroup className="grid grid-cols-[1fr_1fr_1fr] w-[350px]">
+                    <Button
+                      onClick={() =>
+                        editContent({
+                          ...content,
+                          navbar_alignment: "justify-start",
+                        })
+                      }
+                      className=" hover:bg-black/30 cursor-pointer"
+                      variant={"outline"}
+                    >
+                      Gauche
+                    </Button>
+                    <Button
+                      onClick={() =>
+                        editContent({
+                          ...content,
+                          navbar_alignment: "justify-center",
+                        })
+                      }
+                      className=" hover:bg-black/30 cursor-pointer"
+                      variant={"outline"}
+                    >
+                      Centre
+                    </Button>
+                    <Button
+                      onClick={() =>
+                        editContent({
+                          ...content,
+                          navbar_alignment: "justify-end",
+                        })
+                      }
+                      className=" hover:bg-black/30 cursor-pointer"
+                      variant={"outline"}
+                    >
+                      Droite
+                    </Button>
+                  </ButtonGroup>
+                </div>
+              </div>
+              <HomeContent
+                content={content}
+                editContent={(new_content) => editContent(new_content)}
+              />
+            </>
           )}
           {location.pathname == "/lentreprise" && (
             <CompanyContent
