@@ -3,6 +3,21 @@
 html[data-theme="dark"] {
   --bg-color: #{$black-3};
   --color: #{$black-1};
+  --border: #{$black-2};
+
+  --page-bg: #{$black-4};
+  --page-title: #{$black-1};
+
+  --homepage-title: #{$black-1};
+
+  --company-name: #{$black-3};
+  --navbar-bg: #{$black-4};
+  --navbar-titles: #{$black-1};
+  --navbar-text: #{$black-1};
+  --navbar-menu: #{$black-3};
+  --navbar-menu-active: #{$black-3};
+
+  --footer-text: #{$black-3};
 }
 
 html[data-theme="cool"] {
