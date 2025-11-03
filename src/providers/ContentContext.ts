@@ -37,7 +37,7 @@ export const ContentContext = createContext<ContextProps>({
     service_3_name: "Service 3",
     service_3_description: "Meta description",
     service_3_text: "Decription du service",
-    service_number: 0,
+    service_number: 1,
   },
   editContent: () => {},
 });
