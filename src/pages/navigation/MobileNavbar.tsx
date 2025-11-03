@@ -59,16 +59,16 @@ export default function MobileNavbar() {
           </DropdownMenuLabel>
           <DropdownMenuGroup>
             <DropdownMenuItem className=" ml-6">
-              <a href={`/services1`}>{content.service_1_name}</a>
+              <a href={`/service1`}>{content.service_1_name}</a>
             </DropdownMenuItem>
             {content.service_number >= 2 && (
               <DropdownMenuItem className=" ml-6">
-                <a href={`/services2`}>{content.service_2_name}</a>
+                <a href={`/service2`}>{content.service_2_name}</a>
               </DropdownMenuItem>
             )}
             {content.service_number == 3 && (
               <DropdownMenuItem className=" ml-6">
-                <a href={`/services3`}>{content.service_3_name}</a>
+                <a href={`/service3`}>{content.service_3_name}</a>
               </DropdownMenuItem>
             )}
             <Accordion
